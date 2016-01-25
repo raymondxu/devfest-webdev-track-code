@@ -44,3 +44,13 @@ button:hover {
 .search-button {
     padding: 5px 20px;
 }
+
+.results {
+    text-align: left;
+    margin-top: 100px;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 25px;
+}

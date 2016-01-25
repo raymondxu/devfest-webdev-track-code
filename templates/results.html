@@ -1,0 +1,21 @@
+{% extends "search.html" %}
+{% block results %}
+<div class="results">
+	{% if api_data["items"] %}
+		<ul>
+		{% for book in api_data["items"] %}
+			<li>
+				<a href={{ book.accessInfo.webReaderLink }}><h3>{{ book.volumeInfo.title }}</h3></a>
+				<h5>
+					{% for author in book.volumeInfo.authors %}
+						<ul>{{ author }}</ul>
+					{% endfor %}
+				</h5>
+			</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>There were no books found.</p>
+	{% endif %}
+</div>
+{% endblock %}
