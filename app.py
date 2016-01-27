@@ -65,7 +65,6 @@ def register():
 def login():
   form = UserForm(request.form)
   if request.method == 'POST' and form.validate():
-    print form.name.data
     user = User(name=form.name.data,password=form.password.data)
     login_user(user)
     return redirect('/search')
