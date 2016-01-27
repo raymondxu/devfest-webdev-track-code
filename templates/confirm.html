@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %} Favorite Added {% endblock %}
+{% block body %}
+    <h1>Reading List App</h1>
+    <p>Thanks for adding {{api_data.volumeInfo.title}} to your favorites.</p>
+    <a href="/favorites"><button class="launch-button">View Favorites</button></a>
+{% endblock %}

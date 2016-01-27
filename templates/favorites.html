@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Favorites{% endblock %}
+{% block body %}
+<h1>Favorites</h1>
+{% if favorites|length > 0 %}
+    <ul>
+    {% for fav in favorites  %}
+        <li>
+            <a href={{ fav.link }}><h3>{{ fav.title }}</h3></a>
+            <h5><ul>{{ fav.author }}</ul></h5>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You haven't added any favorites yet</p>
+{% endif %}
+{% endblock %}
