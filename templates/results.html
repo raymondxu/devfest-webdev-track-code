@@ -1,7 +1,7 @@
 {% extends "search.html" %}
 {% block results %}
 <div class="results">
-	{% if api_data["items"] %}
+	{% if api_data["totalItems"] > 0 %}
 		<ul>
 		{% for book in api_data["items"] %}
 			<li>
